@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
+/*   By: anlima anlima@student.42lisboa.com         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 20:35:07 by anlima            #+#    #+#             */
-/*   Updated: 2022/07/27 15:55:30 by anlima           ###   ########.fr       */
+/*   Created: 2022/07/28 11:08:59 by anlima            #+#    #+#             */
+/*   Updated: 2022/07/28 12:30:12 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+char	*ft_strcat(char *dest, char *src)
 {
+	int	len;
 	int	i;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	len = 0;
+	i = -1;
+	while (dest[len])
+		len++;
+	while (src[++i])
+		dest[len + i] = src[i];
+	dest[len + 1] = '\0';
+	return (dest);
 }
 /*
 #include <stdio.h>
 
 int	main(int argc, char **argv)
 {
+	char	dest[100] = "gugonas";
 	if (argc == 2)
-		printf("The string '%s' has %i of length.\n", argv[1], ft_strlen(argv[1]));
+		printf("%s", printf(dest, argv[1]));
 }*/
