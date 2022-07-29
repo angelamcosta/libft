@@ -1,42 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 19:24:17 by anlima            #+#    #+#             */
-/*   Updated: 2022/07/29 23:39:06 by anlima           ###   ########.fr       */
+/*   Created: 2022/07/29 22:36:02 by anlima            #+#    #+#             */
+/*   Updated: 2022/07/29 23:21:30 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+char	*ft_strncat(char *dest, char *src, int n)
 {
-	int	temp;
-	int	signal;
+	int	len;
+	int	i;
 
-	signal = 1;
-	temp = 0;
-
-	while (*str <= 32)
-		str++;
-	if (*str == '-')
-		signal *= -1;
-	else if (*str == '+')
-		signal *= 1;
-	while(*str >= 48 && *str <= 57)
-	{
-		temp = temp * 10 + (*str - 48);
-		str++;
-	}
-	return (temp * signal);
+	len = ft_strlen(dest);
+	i = -1;
+	while (src[++i] && i < n)
+		dest[len + i] = src[i];
+	dest[len + i] = '\0';
+	return (dest);
 }
 /*
 #include <stdio.h>
-#include <stdlib.h>
 
 int	main(int argc, char **argv)
 {
-	printf("meu atoi: %i", ft_atoi(argv[1]));
-	printf("\natoi: %i", atoi(argv[1]));
+	char	dest[100] = "vai dar";
+	printf("%s", ft_strncat(dest, " bom, confia.", 4));
 }*/
