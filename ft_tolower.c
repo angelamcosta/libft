@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 20:35:07 by anlima            #+#    #+#             */
-/*   Updated: 2022/07/29 14:29:10 by anlima           ###   ########.fr       */
+/*   Created: 2022/07/29 14:21:01 by anlima            #+#    #+#             */
+/*   Updated: 2022/07/29 14:27:24 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_tolower(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	if (65 <= c && c <= 90)
+		return (c + 32);
+	return (c);
 }
 /*
 #include <stdio.h>
-
 int	main(int argc, char **argv)
 {
-	if (argc == 2)
-		printf("The string '%s' has %i of length.\n", argv[1], ft_strlen(argv[1]));
+	printf("The char %c after tolower became %c", argv[1][0], ft_tolower(argv[1][0]));
 }*/

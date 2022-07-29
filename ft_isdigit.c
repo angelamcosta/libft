@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 20:35:07 by anlima            #+#    #+#             */
-/*   Updated: 2022/07/29 14:29:10 by anlima           ###   ########.fr       */
+/*   Created: 2022/07/29 13:08:22 by anlima            #+#    #+#             */
+/*   Updated: 2022/07/29 13:12:50 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_isdigit(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	if (48 <= c && c <= 57)
+		return (1);
+	return (0);
 }
 /*
 #include <stdio.h>
 
 int	main(int argc, char **argv)
 {
+	int c;
 	if (argc == 2)
-		printf("The string '%s' has %i of length.\n", argv[1], ft_strlen(argv[1]));
+	{
+		c = argv[1][0];
+		printf("The char %c isdigit prints: %i", argv[1][0], ft_isdigit(c));
+	}
 }*/
