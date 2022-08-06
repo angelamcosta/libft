@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 20:35:07 by anlima            #+#    #+#             */
-/*   Updated: 2022/07/29 14:29:10 by anlima           ###   ########.fr       */
+/*   Updated: 2022/08/06 18:45:08 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,3 @@ int	ft_strlen(char *str)
 		i++;
 	return (i);
 }
-/*
-#include <stdio.h>
-
-int	main(int argc, char **argv)
-{
-	if (argc == 2)
-		printf("The string '%s' has %i of length.\n", argv[1], ft_strlen(argv[1]));
-}*/

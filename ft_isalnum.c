@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/29 22:59:57 by anlima            #+#    #+#             */
-/*   Updated: 2022/07/29 23:32:10 by anlima           ###   ########.fr       */
+/*   Created: 2022/08/06 18:13:53 by anlima            #+#    #+#             */
+/*   Updated: 2022/08/06 18:20:18 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strchr(char *s, int c)
+int	ft_isalnum(int ch)
 {
-	while (*s)
-	{
-		if (*s == c)
-			return (s);
-		s++;
-	}
-	return (s);
+	if (ft_isalpha(ch) == 1 || ft_isdigit(ch) == 1)
+		return (1);
+	return (0);
 }
-/*
-#include <stdio.h>
-
-int	main(int argc, char **argv)
-{
-	printf("%s", ft_strchr("camisa", 's'));
-}*/

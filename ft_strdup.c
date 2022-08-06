@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 20:38:37 by anlima            #+#    #+#             */
-/*   Updated: 2022/07/28 10:57:40 by anlima           ###   ########.fr       */
+/*   Updated: 2022/08/06 18:44:59 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,3 @@ char	*ft_strdup(char *src)
 	copy[i] = '\0';
 	return (copy);
 }
-/*
-#include <stdio.h>
-
-int	main(int argc, char **argv)
-{
-	if (argc == 2)
-	{
-		printf("The original string: '%s'.\n", argv[1]);
-		printf("The copy of the string: '%s'.\n", ft_strdup(argv[1]));
-	}
-}*/
