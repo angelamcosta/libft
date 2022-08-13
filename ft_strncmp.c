@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 20:38:37 by anlima            #+#    #+#             */
-/*   Updated: 2022/08/13 17:05:40 by anlima           ###   ########.fr       */
+/*   Created: 2022/08/13 15:39:18 by anlima            #+#    #+#             */
+/*   Updated: 2022/08/13 16:30:38 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strdup(char *src)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	*copy;
-	int		i;
+	int	i;
 
-	copy = malloc(ft_strlen(src) + 1);
-	if (!copy)
-		return (NULL);
 	i = 0;
-	while (src[i])
-	{
-		copy[i] = src[i];
+	if (n == 0)
+		return (0);
+	while (s1[i] && s1[i] == s2[i] && i < n - 1)
 		i++;
-	}
-	copy[i] = '\0';
-	return (copy);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

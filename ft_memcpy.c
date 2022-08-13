@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 20:38:37 by anlima            #+#    #+#             */
-/*   Updated: 2022/08/13 17:05:40 by anlima           ###   ########.fr       */
+/*   Created: 2022/08/13 13:37:51 by anlima            #+#    #+#             */
+/*   Updated: 2022/08/13 13:50:29 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strdup(char *src)
+void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
 {
-	char	*copy;
-	int		i;
+	int	i;
+	char *d;
+	char *s;
 
-	copy = malloc(ft_strlen(src) + 1);
-	if (!copy)
-		return (NULL);
-	i = 0;
-	while (src[i])
-	{
-		copy[i] = src[i];
-		i++;
-	}
-	copy[i] = '\0';
-	return (copy);
+	i = -1;
+	d = (char *)dest;
+	s = (char *)src;
+	while (++i < n)
+		d[i] = s[i];
+	return (dest);
 }

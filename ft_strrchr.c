@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 20:38:37 by anlima            #+#    #+#             */
-/*   Updated: 2022/08/13 17:05:40 by anlima           ###   ########.fr       */
+/*   Created: 2022/08/13 15:18:13 by anlima            #+#    #+#             */
+/*   Updated: 2022/08/13 15:47:48 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strrchr(const char *s, int c)
 {
-	char	*copy;
-	int		i;
+	int	lens;
 
-	copy = malloc(ft_strlen(src) + 1);
-	if (!copy)
-		return (NULL);
-	i = 0;
-	while (src[i])
+	lens = ft_strlen((char *)s);
+	while (--lens >= 0)
 	{
-		copy[i] = src[i];
-		i++;
-	}
-	copy[i] = '\0';
-	return (copy);
+		if (s[lens] == c)
+			return ((char *)&s[lens]);
+	}	
+	return (0);
 }

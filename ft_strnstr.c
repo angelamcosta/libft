@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 20:38:37 by anlima            #+#    #+#             */
-/*   Updated: 2022/08/13 17:05:40 by anlima           ###   ########.fr       */
+/*   Created: 2022/08/13 16:31:01 by anlima            #+#    #+#             */
+/*   Updated: 2022/08/13 17:03:39 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	char	*copy;
-	int		i;
+	int	i;
+	int	j;
 
-	copy = malloc(ft_strlen(src) + 1);
-	if (!copy)
-		return (NULL);
 	i = 0;
-	while (src[i])
+	if (little == 0)
+		return ((char *)big);
+	while (big[i] && i < len)
 	{
-		copy[i] = src[i];
+		j = 0;
+		while (big[i + j] == little[j] && i + j < len)
+		{
+			j++;
+			if (little[j] == '\0')
+				return ((char *)&big[i]);
+		}
 		i++;
 	}
-	copy[i] = '\0';
-	return (copy);
+	return (0);
 }

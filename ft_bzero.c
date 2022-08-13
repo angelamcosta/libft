@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 20:38:37 by anlima            #+#    #+#             */
-/*   Updated: 2022/08/13 17:05:40 by anlima           ###   ########.fr       */
+/*   Created: 2022/08/13 13:14:49 by anlima            #+#    #+#             */
+/*   Updated: 2022/08/13 13:36:26 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strdup(char *src)
+void	ft_bzero(void *s, size_t n)
 {
-	char	*copy;
-	int		i;
+	int	i;
+	char	*str;
 
-	copy = malloc(ft_strlen(src) + 1);
-	if (!copy)
-		return (NULL);
-	i = 0;
-	while (src[i])
-	{
-		copy[i] = src[i];
-		i++;
-	}
-	copy[i] = '\0';
-	return (copy);
+	i = -1;
+	str = (char *)s;
+	while (++i < n)
+		str[i] = 0;
 }

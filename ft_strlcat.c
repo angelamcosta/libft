@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 20:38:37 by anlima            #+#    #+#             */
-/*   Updated: 2022/08/13 17:05:40 by anlima           ###   ########.fr       */
+/*   Created: 2022/08/13 14:32:12 by anlima            #+#    #+#             */
+/*   Updated: 2022/08/13 15:23:23 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strdup(char *src)
+size_t ft_strlcat	(char *dst, const char *src, size_t size)
 {
-	char	*copy;
-	int		i;
+	int	lend;
+	int	lens;
+	int	i;
 
-	copy = malloc(ft_strlen(src) + 1);
-	if (!copy)
-		return (NULL);
-	i = 0;
-	while (src[i])
+	lend = ft_strlen(dst);
+	lens = ft_strlen((char *)src);
+	if (lens < size)
 	{
-		copy[i] = src[i];
-		i++;
+		i = -1;
+		while (++i + lend < size - 1)
+			dst[lend + i] = src[i];
+		dst[lend + i] = '\0';
+		return (lend + lens);
 	}
-	copy[i] = '\0';
-	return (copy);
+	(void)i;
+	return (lens + size);	
 }

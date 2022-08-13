@@ -1,31 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 20:38:37 by anlima            #+#    #+#             */
-/*   Updated: 2022/08/13 17:05:40 by anlima           ###   ########.fr       */
+/*   Created: 2022/08/13 13:57:05 by anlima            #+#    #+#             */
+/*   Updated: 2022/08/13 13:30:51 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_strdup(char *src)
+int	ft_strlen(char *str);
+
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*copy;
-	int		i;
+	int	lend;
+	int	lens;
+	int	i;
+	char *d;
+	char *s;
 
-	copy = malloc(ft_strlen(src) + 1);
-	if (!copy)
-		return (NULL);
-	i = 0;
-	while (src[i])
+	d = (char *)dest;
+	s = (char *)src;
+	lend = ft_strlen(d);
+	lens = ft_strlen(s);
+	if (lend > lens)
 	{
-		copy[i] = src[i];
-		i++;
+		i = -1;
+		while (++i < n)
+			d[i] = s[i];
 	}
-	copy[i] = '\0';
-	return (copy);
+	else
+	{
+		i = 0;
+		while (n-- > i)
+			d[n] = s[n];
+	}
+	return (dest);
 }
