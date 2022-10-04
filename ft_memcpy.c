@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 13:37:51 by anlima            #+#    #+#             */
-/*   Updated: 2022/08/13 13:50:29 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/04 10:23:41 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
 {
-	int	i;
+	size_t	i;
 	char *d;
 	char *s;
 

@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 13:14:49 by anlima            #+#    #+#             */
-/*   Updated: 2022/08/13 13:36:26 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/04 10:15:54 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	int	i;
+	size_t	i;
 	char	*str;
 
 	i = -1;

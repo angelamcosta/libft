@@ -6,17 +6,15 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 13:34:17 by anlima            #+#    #+#             */
-/*   Updated: 2022/08/13 14:25:51 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/04 10:15:31 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str);
-
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	int	i;
+	size_t	i;
 
 	i = -1;
 	while(++i < size - 1)

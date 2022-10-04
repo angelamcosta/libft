@@ -6,42 +6,42 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 12:14:14 by anlima            #+#    #+#             */
-/*   Updated: 2022/08/14 12:46:17 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/04 10:19:16 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int ft_charset(char c, char *set)
+{
+	int	i;
+	i = 0;
+	while (set[i])
+	{
+		if (set[i] == c)
+			return (1);
+	}
+	return (0);
+}
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	lentrim;
+	char	*s2;
+	int	x;
+	int	y;
 	int	i;
-	int	j;
-	char	*strc;
-
-	lentrim = 0;
-	i = -1;
-	while (set[++i])
-		lentrim += charnumber((char *)s1, set[i]);
-	strc = malloc(ft_strlen((char *)s1) - lentrim + 1);
-	if (!strc)
+	x = 0;
+	i = 0;
+	while (set[x] && ft_charset(set[x], (char *)set))
+		x++;
+	y = ft_strlen((char *)s1);
+	while (set[y - 1] && ft_charset(set[y - 1], (char *)set))
+		y--;
+	s2 = (char *)malloc(sizeof(char) * y - x + 1);
+	while (s1[x] && x < y)
 	{
-		(void)j;
-		return (0);
+		s2[i++] = s1[x++];
 	}
-	j = 0;
-	while (*s1)
-	{
-		i = -1;
-		while (set[++i])
-		{
-			if (set[i] == *s1)
-				break;
-		}
-		if (set[i] == '\0')
-			strc[j++] = *s1;
-		s1++;
-	}
-	strc[j] = '\0';
-	return (strc);
+	s2[i] = '\0';
+	return (s2);
 }

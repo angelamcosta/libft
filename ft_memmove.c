@@ -6,19 +6,17 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 13:57:05 by anlima            #+#    #+#             */
-/*   Updated: 2022/08/13 13:30:51 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/04 10:24:34 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str);
-
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	int	lend;
 	int	lens;
-	int	i;
+	size_t	i;
 	char *d;
 	char *s;
 

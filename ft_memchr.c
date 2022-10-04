@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 15:48:59 by anlima            #+#    #+#             */
-/*   Updated: 2022/08/13 15:55:41 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/04 10:20:53 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int	i;
+	size_t	i;
 	char *str;
 
 	i = -1;
