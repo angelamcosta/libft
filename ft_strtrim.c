@@ -6,15 +6,16 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 12:14:14 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/04 10:19:16 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/06 10:36:48 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_charset(char c, char *set)
+static int	ft_charset(char c, char *set)
 {
 	int	i;
+
 	i = 0;
 	while (set[i])
 	{
@@ -27,9 +28,10 @@ static int ft_charset(char c, char *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*s2;
-	int	x;
-	int	y;
-	int	i;
+	int		x;
+	int		y;
+	int		i;
+
 	x = 0;
 	i = 0;
 	while (set[x] && ft_charset(set[x], (char *)set))

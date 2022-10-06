@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 14:32:12 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/04 10:25:00 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/06 10:30:58 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	lend;
 	size_t	lens;
-	int	i;
+	int		i;
 
 	lend = ft_strlen(dst);
 	lens = ft_strlen((char *)src);
@@ -29,5 +29,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		return (lend + lens);
 	}
 	(void)i;
-	return (lens + size);	
+	return (lens + size);
 }

@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 11:56:00 by anlima            #+#    #+#             */
-/*   Updated: 2022/08/24 10:47:39 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/06 10:38:36 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	add_str(char *joined, char *s, int i)
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*joined;
-	int	i;
+	int		i;
 
 	joined = malloc(ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1);
 	if (!joined)
