@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 10:44:52 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/06 10:46:43 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/10 09:47:08 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 
 int		ft_atoi(char *str);
 void	ft_bzero(void *s, size_t n);
+void	*ft_calloc(size_t num, size_t size);
 int		ft_isalnum(int ch);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);

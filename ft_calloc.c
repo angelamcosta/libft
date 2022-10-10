@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/14 11:49:03 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/10 10:46:50 by anlima           ###   ########.fr       */
+/*   Created: 2022/10/10 09:33:27 by anlima            #+#    #+#             */
+/*   Updated: 2022/10/10 09:59:05 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	*ft_calloc(size_t num, size_t size)
 {
-	char	*subs;
-	size_t	i;
+	void	*arr;
 
-	subs = malloc(len + 1);
-	if (!subs)
+	arr = (void *)malloc(sizeof(size) * num);
+	if (arr == 0)
 		return (NULL);
-	i = 0;
-	while (s[start] && i < len)
-		subs[i++] = s[start++];
-	subs[i] = '\0';
-	return (subs);
+	ft_bzero(arr, size * num);
+	return (arr);
 }
