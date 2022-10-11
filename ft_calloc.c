@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 09:33:27 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/10 09:59:05 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/10 16:15:00 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_calloc(size_t num, size_t size)
 	void	*arr;
 
 	arr = (void *)malloc(sizeof(size) * num);
-	if (arr == 0)
+	if (!arr)
 		return (NULL);
 	ft_bzero(arr, size * num);
 	return (arr);

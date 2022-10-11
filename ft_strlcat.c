@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 14:32:12 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/07 09:55:53 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/11 09:33:58 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[i] = '\0';
 		return (lend + lens);
 	}
-	(void)i;
 	return (lens + size);
 }

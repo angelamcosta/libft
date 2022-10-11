@@ -6,13 +6,13 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 12:34:41 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/06 10:23:30 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/11 10:35:26 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_charcount(int n)
+static int	ft_charcount(long n)
 {
 	int	i;
 
@@ -30,24 +30,26 @@ static int	ft_charcount(int n)
 char	*ft_itoa(int n)
 {
 	int		len;
+	long	nb;
 	char	*str;
 
-	len = ft_charcount(n) + 1;
-	if (n < 0)
-		n *= -1;
+	nb = n;
+	len = ft_charcount(nb) + 1;
 	str = (char *)malloc(len);
 	if (!str)
 		return (0);
-	str[--len] = '\0';
-	while (--len >= 0)
+	if (nb < 0)
 	{
-		if (len == 0 && n == 0)
-			str[len] = '-';
-		else
-		{
-			str[len] = n % 10 + 48;
-			n = n / 10;
-		}
+		nb *= -1;
+		str[0] = '-';
+	}
+	str[--len] = '\0';
+	if (nb == 0)
+		str[0] = '0';
+	while (nb)
+	{
+		str[--len] = nb % 10 + 48;
+		nb /= 10;
 	}
 	return (str);
 }

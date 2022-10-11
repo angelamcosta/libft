@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 16:31:01 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/10 09:01:26 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/10 16:19:28 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	int		j;
 
 	i = 0;
-	if (little == 0 || little[0] == '\0')
+	if (!little || little[0] == '\0')
 		return ((char *)big);
 	while (big[i] && i < len)
 	{
