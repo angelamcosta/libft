@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 10:44:52 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/10 09:47:08 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/12 11:59:00 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		ft_isprint(int c);
 char	*ft_itoa(int n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 char	**ft_split(char const *s, char c);
