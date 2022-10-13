@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 12:34:41 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/11 10:35:26 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/13 09:37:22 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	ft_charcount(long n)
 
 char	*ft_itoa(int n)
 {
-	int		len;
+	size_t	len;
 	long	nb;
 	char	*str;
 
@@ -37,7 +37,7 @@ char	*ft_itoa(int n)
 	len = ft_charcount(nb) + 1;
 	str = (char *)malloc(len);
 	if (!str)
-		return (0);
+		return (NULL);
 	if (nb < 0)
 	{
 		nb *= -1;

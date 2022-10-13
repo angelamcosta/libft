@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 13:57:05 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/06 10:39:13 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/13 09:37:56 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int		lend;
-	int		lens;
+	size_t	lend;
+	size_t	lens;
 	size_t	i;
 	char	*d;
 	char	*s;

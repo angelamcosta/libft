@@ -6,71 +6,72 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 09:35:05 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/12 11:36:33 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/13 11:09:16 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_wordcounter(char const *s, char c)
+static int	ft_wc(char const *s, char c)
 {
-	int		i;
-	int		j;
 	int		words;
+	int		i;
 
-	i = -1;
-	j = 0;
 	words = 0;
-	while (s[++i])
+	i = 0;
+	while (*s)
 	{
-		if (s[i] == c)
+		if (*s != c && i == 0)
 		{
-			if (i - j > 1)
-				words++;
-			j = i;
+			i = 1;
+			words++;
 		}
+		else if (*s == c)
+			i = 0;
+		s++;
 	}
 	return (words);
 }
 
-static char	*ft_newstring(char const *s, int i, int j)
+static char	*ft_nw(char *s, char c)
 {
-	char	*subs;
-	int		k;
+	char	*s1;
+	int		i;
 
-	subs = malloc(j - i + 1);
-	if (!subs)
+	i = 0;
+	while (s[i] && s[i] != c)
+		i++;
+	s1 = malloc (i + 1);
+	if (!s1)
 		return (NULL);
-	k = 0;
-	while (s[i] && i < j)
-		subs[k++] = s[i++];
-	subs[k] = '\0';
-	return (subs);
+	i = 0;
+	while (*s && *s != c)
+		s1[i++] = *s++;
+	s1[i] = '\0';
+	return (s1);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**strings;
-	int		l;
-	int		i;
-	int		j;
+	size_t	l;
 
 	while (*s && *s == c)
 		s++;
-	strings = (char **)malloc(sizeof(char *) * ft_wordcounter(s, c) + 1);
+	strings = (char **)malloc(sizeof(char *) * (ft_wc(s, c) + 1));
 	if (!s || !strings)
 		return (NULL);
-	i = -1;
-	j = 0;
 	l = 0;
-	while (s[++i])
+	while (*s)
 	{
-		if (s[i] == c)
+		if (*s != c)
 		{
-			if (i - j > 0)
-				strings[l] = ft_newstring(s, j, i);
-			j = i + 1;
+			strings[l++] = ft_nw((char *)s, c);
+			while (*s != c && *s)
+				s++;
 		}
+		else
+			s++;
 	}
 	strings[l] = 0;
 	return (strings);
