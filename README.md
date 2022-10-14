@@ -89,5 +89,5 @@ The subject of the project can be found in [this link](https://raw.githubusercon
 ## Tasks
 
 - [X] Part 1 - Libc functions
-- [x] Part 2 - Additional functions
+- [X] Part 2 - Additional functions
 - [X] Bonus Part (ongoing)
