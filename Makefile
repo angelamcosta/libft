@@ -1,7 +1,7 @@
-NAME	=		libft.a
+NAME	=	libft.a
 
 CC	=		gcc
-CFLAGS	=		-Wall -Werror -Wextra
+CFLAGS	=	-Wall -Werror -Wextra
 RM	=		rm -f
 
 SRC	=		ft_atoi.c ft_isprint.c ft_memset.c ft_strlcpy.c\
@@ -16,15 +16,23 @@ ft_putendl_fd.c ft_putnbr_fd.c
 
 OBJ	=		$(SRC:.c=.o)
 
-all:	$(NAME)
+BONUS = 	ft_striteri.c ft_lstadd_front.c ft_lstsize.c\
+ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c
 
-$(NAME):		$(OBJ)
-				ar rcs $(NAME) $(OBJ)
+BOBJ =		$(BONUS:.c=.o)
+
+all:		$(NAME)
+
+bonus:		$(BOBJ)
+			ar rcs $(NAME) $(BOBJ)
+
+$(NAME):	$(OBJ)
+			ar rcs $(NAME) $(OBJ)
 
 clean:
-				$(RM) $(OBJ)
+			$(RM) $(OBJ) $(BOBJ)
 
 fclean:	clean
-				$(RM) $(NAME)
+			$(RM) $(NAME)
 
 re:	fclean	$(NAME)

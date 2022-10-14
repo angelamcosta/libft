@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/13 08:34:20 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/14 08:35:37 by anlima           ###   ########.fr       */
+/*   Created: 2022/10/14 14:43:40 by anlima            #+#    #+#             */
+/*   Updated: 2022/10/14 14:45:08 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	int		i;
 
-	i = -1;
-	while (s[++i])
-		f(i, &s[i]);
 }
