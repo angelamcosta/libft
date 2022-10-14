@@ -18,6 +18,9 @@ The subject of the project can be found in [this link](https://raw.githubusercon
 ## Mandatory part
 
 ### Part 1 - Libc functions
+<details open>
+<summary> Libc functions </summary>
+
 -   isalpha
 -   isdigit
 -   isalnum
@@ -41,8 +44,13 @@ The subject of the project can be found in [this link](https://raw.githubusercon
 -   atoi
 -   calloc
 -   strdup
+ 
+</details>
 
 ### Part 2 - Additional functions
+<details open>
+<summary> Additional functions </summary>
+
 -   ft_substr
 -   ft_strjoin
 -   ft_strtrim
@@ -55,7 +63,12 @@ The subject of the project can be found in [this link](https://raw.githubusercon
 -   ft_putendl_fd
 -   ft_putnbr_fd
 
+</details>
+
 ### Bonus part
+<details open>
+<summary> Bonus part </summary>
+
 -   ft_lstnew
 -   ft_lstdelone
 -   ft_lstclear
@@ -65,6 +78,8 @@ The subject of the project can be found in [this link](https://raw.githubusercon
 -   ft_lstiter
 -   ft_lstmap
 -   ft_lstlast
+
+</details>
 
 ## Tasks
 - [X] Part 1 - Libc functions
