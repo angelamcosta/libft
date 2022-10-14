@@ -90,4 +90,4 @@ The subject of the project can be found in [this link](https://raw.githubusercon
 
 - [X] Part 1 - Libc functions
 - [x] Part 2 - Additional functions
-- [ ] Bonus Part (ongoing)
+- [X] Bonus Part (ongoing)
