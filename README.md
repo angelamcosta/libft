@@ -88,6 +88,6 @@ The subject of the project can be found in [this link](https://raw.githubusercon
 
 ## Tasks
 
-- [X] Part 1 - Libc functions
-- [X] Part 2 - Additional functions
-- [X] Bonus Part (ongoing)
+- :ballot_box_with_check: Part 1 - Libc functions
+- :ballot_box_with_check: Part 2 - Additional functions
+- :ballot_box_with_check: Bonus Part (ongoing)
