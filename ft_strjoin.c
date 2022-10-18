@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 11:56:00 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/16 16:16:37 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/18 09:34:54 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 
 	i = 0;
+	if (!s1 && !s2)
+		return (NULL);
 	joined = malloc(ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1);
 	if (!joined)
 		return (NULL);
-	while (joined[i] && *s1)
+	while (s1 && *s1)
 		joined[i++] = *s1++;
-	while (joined[i] && *s2)
+	while (s2 && *s2)
 		joined[i++] = *s2++;
 	joined[i] = '\0';
 	return (joined);

@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 09:35:05 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/13 11:09:16 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/18 09:33:20 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ char	**ft_split(char const *s, char c)
 	char	**strings;
 	size_t	l;
 
+	if (!s)
+		return (NULL);
 	while (*s && *s == c)
 		s++;
 	strings = (char **)malloc(sizeof(char *) * (ft_wc(s, c) + 1));

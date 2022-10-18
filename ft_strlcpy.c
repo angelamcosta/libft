@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 13:34:17 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/07 10:12:43 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/18 09:37:23 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	if (size > 0)
 	{
 		i = 0;
-		while (src[i] && i < size - 1)
+		while (src && src[i] && (i < size - 1))
 		{
 			dst[i] = src[i];
 			i++;
