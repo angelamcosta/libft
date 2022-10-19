@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 14:32:12 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/18 09:42:31 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/19 17:58:16 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	lens;
 	size_t	i;
 
-	lend = ft_strlen(dst);
 	lens = ft_strlen((char *)src);
+	if (!size)
+		return (lens);
+	lend = ft_strlen(dst);
 	i = lend;
-	if (size > lend)
+	if (size > 0 && size > lend)
 	{
 		while (*src && (i < size - 1))
 			dst[i++] = *src++;

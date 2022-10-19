@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 13:57:05 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/13 09:37:56 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/19 17:41:31 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,25 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t	lend;
-	size_t	lens;
-	size_t	i;
-	char	*d;
-	char	*s;
+	size_t			i;
+	unsigned char	*d;
+	unsigned char	*s;
 
-	d = (char *)dest;
-	s = (char *)src;
-	lend = ft_strlen(d);
-	lens = ft_strlen(s);
-	if (lend > lens)
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
+	if (!d && !s)
+		return (NULL);
+	if (d > s)
+	{
+		n++;
+		while (--n > 0)
+			d[n - 1] = s[n - 1];
+	}
+	else
 	{
 		i = -1;
 		while (++i < n)
 			d[i] = s[i];
-	}
-	else
-	{
-		i = 0;
-		while (n-- > i)
-			d[n] = s[n];
 	}
 	return (dest);
 }
