@@ -2,6 +2,8 @@
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com)
 
+[![wakatime](https://wakatime.com/badge/user/0c29d5b3-c30b-4e1a-ad07-2da3bd4f7e05/project/111d9103-8cea-4d3e-81f6-47d9953770a3.svg)](https://wakatime.com/badge/user/0c29d5b3-c30b-4e1a-ad07-2da3bd4f7e05/project/111d9103-8cea-4d3e-81f6-47d9953770a3)
+
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -21,7 +23,7 @@ The subject of the project can be found in [this link](https://raw.githubusercon
 
 ### Part 1 - Libc functions
 
-<details open>
+<details closed>
 <summary> Libc functions </summary>
 
 - isalpha
@@ -52,7 +54,7 @@ The subject of the project can be found in [this link](https://raw.githubusercon
 
 ### Part 2 - Additional functions
 
-<details open>
+<details closed>
 <summary> Additional functions </summary>
 
 - ft_substr
@@ -71,7 +73,7 @@ The subject of the project can be found in [this link](https://raw.githubusercon
 
 ### Bonus part
 
-<details open>
+<details closed>
 <summary> Bonus part </summary>
 
 - ft_lstnew
@@ -90,4 +92,4 @@ The subject of the project can be found in [this link](https://raw.githubusercon
 
 - :ballot_box_with_check: Part 1 - Libc functions
 - :ballot_box_with_check: Part 2 - Additional functions
-- :ballot_box_with_check: Bonus Part
+- :ballot_box_with_check: Bonus part
