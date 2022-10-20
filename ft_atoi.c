@@ -6,14 +6,14 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 19:24:17 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/19 19:09:09 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/20 10:26:12 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(char *str)
 {
-	int	temp;
-	int	signal;
+	long int	temp;
+	int			signal;
 
 	signal = 1;
 	temp = 0;
@@ -28,8 +28,13 @@ int	ft_atoi(char *str)
 		str++;
 	while (*str >= 48 && *str <= 57)
 	{
-		temp = temp * 10 + (*str - 48);
-		str++;
+		temp = temp * 10 + (*str++ - 48);
+		if (temp > 2147483648 || temp < -2147483648)
+			break ;
 	}
-	return (temp * signal);
+	if ((temp * signal) == ((int)temp * signal))
+		return ((int)temp * signal);
+	else if (temp * signal > 0)
+		return (-1);
+	return (0);
 }
