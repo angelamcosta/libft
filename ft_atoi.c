@@ -6,11 +6,11 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 19:24:17 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/20 10:26:12 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/26 11:39:02 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	long int	temp;
 	int			signal;
