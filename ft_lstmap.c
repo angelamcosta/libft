@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 17:23:19 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/15 09:32:13 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/26 14:16:32 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		if (!temp)
 		{
 			ft_lstclear(&temp, del);
-			return (NULL);
+			break ;
 		}
 		ft_lstadd_back(&new, temp);
 		lst = lst->next;

@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 12:14:14 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/25 22:13:05 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/26 14:08:57 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	while (j > i && ft_strchr(set, s1[j]))
 		j--;
+	if (i == j && !s1[i])
+		return (ft_strdup(""));
 	s2 = (char *)malloc(j - i + 2);
 	if (!s2)
 		return (NULL);
