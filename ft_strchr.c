@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 15:12:13 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/18 09:31:11 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/26 12:46:58 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (s && *s && *s != c)
+	while ((unsigned char)*s && (unsigned char)*s != (unsigned char)c)
 		s++;
-	if (*s != c)
+	if ((unsigned char)*s != (unsigned char)c)
 		return (NULL);
 	return ((char *)s);
 }

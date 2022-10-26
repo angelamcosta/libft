@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 15:18:13 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/13 09:48:59 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/26 12:48:20 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ char	*ft_strrchr(const char *s, int c)
 	size_t	lens;
 
 	lens = ft_strlen((char *)s);
-	while (lens > 0 && s[lens] != c)
+	while (lens > 0 && (unsigned char)s[lens] != (unsigned char)c)
 		lens--;
-	if (s[lens] == c)
+	if ((unsigned char)s[lens] == (unsigned char)c)
 		return ((char *)&s[lens]);
 	return (0);
 }
