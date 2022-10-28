@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 19:24:17 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/26 11:39:02 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/28 11:12:59 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_atoi(const char *str)
 	while (*str >= 48 && *str <= 57)
 	{
 		temp = temp * 10 + (*str++ - 48);
-		if (temp > 2147483648 || temp < -2147483648)
+		if (temp > 2147483648)
 			break ;
 	}
 	if ((temp * signal) == ((int)temp * signal))
