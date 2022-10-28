@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 09:33:27 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/28 14:41:06 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/28 15:41:01 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,14 @@
 void	*ft_calloc(size_t num, size_t size)
 {
 	void	*arr;
+	size_t	i;
 
-	arr = (void *)malloc(size * num);
+	i = num * size;
+	if (i / size != num)
+		return (NULL);
+	arr = (void *)malloc(i);
 	if (!arr)
 		return (NULL);
-	ft_memset(arr, 0, size * num);
+	ft_memset(arr, 0, i);
 	return (arr);
 }
