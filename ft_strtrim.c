@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 12:14:14 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/28 16:54:25 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/29 19:11:26 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1 || !set)
 		return (NULL);
 	i = 0;
-	j = ft_strlen((char *) s1);
+	j = ft_strlen(s1);
 	while (ft_strchr(set, s1[i]))
 		i++;
 	while (j > i && ft_strchr(set, s1[j]))
