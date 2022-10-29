@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 09:35:05 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/18 09:33:20 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/29 19:06:20 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,8 @@ static int	ft_wc(char const *s, char c)
 	i = 0;
 	while (*s)
 	{
-		if (*s != c && i == 0)
-		{
-			i = 1;
+		if (*s != c && i++ == 0)
 			words++;
-		}
 		else if (*s == c)
 			i = 0;
 		s++;
@@ -33,47 +30,30 @@ static int	ft_wc(char const *s, char c)
 	return (words);
 }
 
-static char	*ft_nw(char *s, char c)
-{
-	char	*s1;
-	int		i;
-
-	i = 0;
-	while (s[i] && s[i] != c)
-		i++;
-	s1 = malloc (i + 1);
-	if (!s1)
-		return (NULL);
-	i = 0;
-	while (*s && *s != c)
-		s1[i++] = *s++;
-	s1[i] = '\0';
-	return (s1);
-}
-
 char	**ft_split(char const *s, char c)
 {
 	char	**strings;
 	size_t	l;
+	size_t	i;
+	size_t	j;
 
 	if (!s)
 		return (NULL);
-	while (*s && *s == c)
-		s++;
 	strings = (char **)malloc(sizeof(char *) * (ft_wc(s, c) + 1));
 	if (!s || !strings)
 		return (NULL);
 	l = 0;
-	while (*s)
+	i = -1;
+	while (s[++i])
 	{
-		if (*s != c)
+		if (s[i] != c)
 		{
-			strings[l++] = ft_nw((char *)s, c);
-			while (*s != c && *s)
-				s++;
+			j = i;
+			while (s[j] && s[j] != c)
+				j++;
+			strings[l++] = ft_substr(s, i, j - i);
+			i = j;
 		}
-		else
-			s++;
 	}
 	strings[l] = 0;
 	return (strings);
