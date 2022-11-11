@@ -1,10 +1,12 @@
-# Libft
+# :books: Libft
+<div align=center>
+  
+  [![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+  
+  <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/angelamcosta/libft" /> <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/angelamcosta/libft" /> <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/angelamcosta/libft" /> <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/angelamcosta/libft" /> <a href="https://wakatime.com/badge/user/0c29d5b3-c30b-4e1a-ad07-2da3bd4f7e05/project/111d9103-8cea-4d3e-81f6-47d9953770a3"><img src="https://wakatime.com/badge/user/0c29d5b3-c30b-4e1a-ad07-2da3bd4f7e05/project/111d9103-8cea-4d3e-81f6-47d9953770a3.svg" alt="wakatime"></a>
 
-[![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com)
-
-[![wakatime](https://wakatime.com/badge/user/0c29d5b3-c30b-4e1a-ad07-2da3bd4f7e05/project/111d9103-8cea-4d3e-81f6-47d9953770a3.svg)](https://wakatime.com/badge/user/0c29d5b3-c30b-4e1a-ad07-2da3bd4f7e05/project/111d9103-8cea-4d3e-81f6-47d9953770a3)
-
-![git clone](https://raw.githubusercontent.com/angelamcosta/libft/main/src/demo.gif)
+  ![git clone](https://raw.githubusercontent.com/angelamcosta/libft/main/src/demo.gif)
+</div>
 
 ## Table of Contents
 
