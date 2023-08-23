@@ -4,7 +4,7 @@
 
   ![badge](https://raw.githubusercontent.com/angelamcosta/angelamcosta/main/42_badges/libfte.png)
   
-  [![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) [![anlima's 42 Libft Score](https://badge42.vercel.app/api/v2/cl9oe5ogt00110fm6h34z9iu9/project/2854860)](https://github.com/JaeSeoKim/badge42)
+  [![anlima's 42 Libft Score](https://badge42.vercel.app/api/v2/cl9oe5ogt00110fm6h34z9iu9/project/2854860)](https://github.com/JaeSeoKim/badge42)
   
   <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/angelamcosta/libft" /> <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/angelamcosta/libft" /> <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/angelamcosta/libft" /> <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/angelamcosta/libft" /> <a href="https://wakatime.com/badge/user/0c29d5b3-c30b-4e1a-ad07-2da3bd4f7e05/project/111d9103-8cea-4d3e-81f6-47d9953770a3"><img src="https://wakatime.com/badge/user/0c29d5b3-c30b-4e1a-ad07-2da3bd4f7e05/project/111d9103-8cea-4d3e-81f6-47d9953770a3.svg" alt="wakatime"></a>
 </div>
